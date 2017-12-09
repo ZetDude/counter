@@ -10,7 +10,7 @@
         {
             ++totalSeconds;
             fractionsLabel.innerHTML = pad(totalSeconds%6+1);
-            secondsLabel.innerHTML = pad(parseInt(totalSeconds/6+1));
+            secondsLabel.innerHTML = pad(parseInt(totalSeconds%36/6+1));
             minutesLabel.innerHTML = pad(parseInt(totalSeconds/6/36+1));
         }
 

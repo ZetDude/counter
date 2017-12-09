@@ -1,4 +1,4 @@
-<label id="minutes">00</label>:<label id="seconds">00</label>:<label id="fractions">00</label>
+<label id="minutes">01</label>:<label id="seconds">01</label>:<label id="fractions">01</label>
     <script type="text/javascript">
         var minutesLabel = document.getElementById("minutes");
         var secondsLabel = document.getElementById("seconds");
@@ -9,9 +9,9 @@
         function setTime()
         {
             ++totalSeconds;
-            fractionsLabel.innerHTML = pad(totalSeconds%6);
-            secondsLabel.innerHTML = pad(parseInt(totalSeconds/6));
-            minutesLabel.innerHTML = pad(parseInt(totalSeconds/6/36));
+            fractionsLabel.innerHTML = pad(totalSeconds%6+1);
+            secondsLabel.innerHTML = pad(parseInt(totalSeconds/6+1));
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/6/36+1));
         }
 
         function pad(val)

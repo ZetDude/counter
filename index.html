@@ -1,15 +1,27 @@
-<label id="minutes">00</label>:<label id="seconds">00</label>
+Jumerian time: <label id="minutes">00</label>:<label id="seconds">00</label>
+Human time: <label id="hmin">00</label>:<label id="hsec">00</label>
     <script type="text/javascript">
         var minutesLabel = document.getElementById("minutes");
         var secondsLabel = document.getElementById("seconds");
+        var minutesHuman = document.getElementById("hmin");
+        var secondsHuman = document.getElementById("hsec");
         var totalSeconds = 0;
+        var totalSecondsH = 0;
         setInterval(setTime, 1009.302);
+        setInterval(setTimeH, 1000);
 
         function setTime()
         {
             ++totalSeconds;
             secondsLabel.innerHTML = pad(parseInt(totalSeconds%72));
             minutesLabel.innerHTML = pad(parseInt(totalSeconds/72));
+        }
+        
+        function setTimeH()
+        {
+            ++totalSecondsH;
+            secondsHuman.innerHTML = pad(parseInt(totalSecondsH%60));
+            minutesHuman.innerHTML = pad(parseInt(totalSecondsH/60));
         }
 
         function pad(val)

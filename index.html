@@ -1,17 +1,15 @@
-<label id="minutes">01</label>:<label id="seconds">01</label>:<label id="fractions">01</label>
+<label id="minutes">01</label>:<label id="seconds">01</label>
     <script type="text/javascript">
         var minutesLabel = document.getElementById("minutes");
         var secondsLabel = document.getElementById("seconds");
-        var fractionsLabel = document.getElementById("fractions");
         var totalSeconds = 0;
-        setInterval(setTime, 336.434);
+        setInterval(setTime, 1009.302);
 
         function setTime()
         {
             ++totalSeconds;
-            fractionsLabel.innerHTML = pad(totalSeconds%6);
-            secondsLabel.innerHTML = pad(parseInt(totalSeconds/6%36));
-            minutesLabel.innerHTML = pad(parseInt(totalSeconds/6/36));
+            secondsLabel.innerHTML = pad(parseInt(totalSeconds%72));
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/72));
         }
 
         function pad(val)

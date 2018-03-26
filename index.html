@@ -21,8 +21,8 @@ Human time : <label id="hmin">00</label>:<label id="hsec">00</label> <br />
         function setTime()
         {
             ++totalSeconds;
-            secondsLabel.innerHTML = base12(pad(parseInt(totalSeconds%72)));
-            minutesLabel.innerHTML = base12(pad(parseInt(totalSeconds/72)));
+            secondsLabel.innerHTML = pad(base12(parseInt(totalSeconds%72)));
+            minutesLabel.innerHTML = pad(base12(parseInt(totalSeconds/72)));
         }
         
         function setTimeH()
